@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Life: Shop Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-box">
+       
+
+<!-- трава с цветами -->
+    <div class="grass">
+        <div class="flower" style="left:50px; --hue:330;"></div>
+        <div class="flower" style="left:180px; --hue:45;"></div>
+        <div class="flower" style="left:300px; --hue:200;"></div>
+        <div class="flower" style="left:420px; --hue:60;"></div>
+        <div class="flower" style="left:560px; --hue:310;"></div>
+        <div class="flower" style="left:700px; --hue:15;"></div>
+    </div>
+
+        <div class="floor"></div> <!-- вот этот элемент — пол -->
+    
+        <div id="start-screen" class="overlay">
+            <h1>🐈 Будни Кота</h1>
+            <input type="text" id="name-input" placeholder="Имя котика" style="padding:10px; border-radius:10px; margin-bottom:15px; border:none; text-align:center;">
+            <button onclick="play()" style="padding:15px 30px; background:#FF8A8A; color:white; border:none; border-radius:10px; font-weight:bold; cursor:pointer;">ИГРАТЬ</button>
+        </div>
+
+        <div id="shop-screen" class="overlay hidden">
+            <h2 style="color:white">Магазин скинов</h2>
+            <div style="display:flex;">
+                <div class="shop-card">
+                    <div style="font-size:40px; background: gold; border-radius:50%;">🐈</div>
+                    <p>Золотой скин</p>
+                    <button class="buy-btn" onclick="buySkin('gold', 50)">Купить (50 💰)</button>
+                </div>
+                <div class="shop-card">
+                    <div style="font-size:40px; background: linear-gradient(to right, pink, skyblue); border-radius:50%;">🐈</div>
+                    <p>Космо-скин</p>
+                    <button class="buy-btn" onclick="buySkin('cosmo', 100)">Купить (100 💰)</button>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleShop()">НАЗАД В ИГРУ</button>
+        </div>
+
+        <div class="stats">
+            <span id="score-txt">💰: 0</span>
+            <button class="shop-btn" onclick="toggleShop()">МАГАЗИН</button>
+            <span id="hunger-txt">🍖: 100</span>
+        </div>
+
+       <div id="cat">
+    <div class="tail"></div>
+    <div class="body">
+        <div class="paw l-paw"></div>
+        <div class="paw r-paw"></div>
+    </div>
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="face">
+        <div class="eye l"></div>
+        <div class="eye r"></div>
+        <div class="nose"></div>
+    </div>
+</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
+
+
