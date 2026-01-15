@@ -22,3 +22,4 @@ Additional skins and cat upgrades
 Technologies Used:
 HTML, CSS, JavaScript
 Status: In progress — many features are yet to be added
+Planned features: optimization of game mechanics, optimization of the shop, as well as more skins and additional features.
